@@ -13,14 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    private func setupWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = RecentViewController()
+        let viewController = RecentViewController(viewModel: RecentViewModel())
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
+    }
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupWindow()
         FirebaseApp.configure()
         return true
     }
