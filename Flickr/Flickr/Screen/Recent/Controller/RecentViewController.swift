@@ -26,9 +26,10 @@ final class RecentViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Recent"
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         viewModel.fetchPhotos() 
         
@@ -55,12 +56,12 @@ extension RecentViewController: UITableViewDelegate {
 extension RecentViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.photosResponse?.photos?.photo?.count ?? 0
+        return viewModel.numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Cell - \(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = viewModel.photoForIndexPath(indexPath)?.ownername
         return cell
     }
     

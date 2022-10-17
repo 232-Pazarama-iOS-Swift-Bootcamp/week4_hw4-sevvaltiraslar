@@ -23,9 +23,9 @@ final class RecentViewModel {
     
     var changeHandler: ((RecentChanges) -> Void)?
 
-    /*var numberOfRows: Int {
-        photosResponse?.photos?.photo.
-    }*/
+    var numberOfRows: Int {
+        photosResponse?.photos?.photo?.count ?? 0
+    }
     
     func fetchPhotos() {
         provider.request(.getRecentPhotos) { result in
@@ -45,8 +45,8 @@ final class RecentViewModel {
             }
         }
     
-    /*func photoForIndexPath(_ indexPath: IndexPath) -> Photo? {
+    func photoForIndexPath(_ indexPath: IndexPath) -> Photo? {
         photosResponse?.photos?.photo?[indexPath.row]
-    }*/
+    }
     
 }
