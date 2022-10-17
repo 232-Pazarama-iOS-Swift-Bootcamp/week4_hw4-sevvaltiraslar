@@ -780,6 +780,7 @@ PODS:
     - Libuv-gRPC (= 0.0.10)
   - gRPC-Core/Interface (1.44.0)
   - GTMSessionFetcher/Core (2.1.0)
+  - Kingfisher (7.4.0)
   - leveldb-library (1.22.1)
   - Libuv-gRPC (0.0.10):
     - Libuv-gRPC/Implementation (= 0.0.10)
@@ -805,6 +806,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - Firebase/Storage
+  - Kingfisher
   - Moya
   - SnapKit
 
@@ -832,6 +834,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - Kingfisher
     - leveldb-library
     - Libuv-gRPC
     - Moya
@@ -862,6 +865,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
   GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
+  Kingfisher: 596b207973051aae5e4c54a1c1cb39837ea10d36
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
@@ -869,6 +873,6 @@ SPEC CHECKSUMS:
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: df07f18a3c0e8bcd0b45224af5f047c87c8526eb
+PODFILE CHECKSUM: 4e4c2a352fc01a96dd0f43cd48103bb59d21b37a
 
 COCOAPODS: 1.11.3

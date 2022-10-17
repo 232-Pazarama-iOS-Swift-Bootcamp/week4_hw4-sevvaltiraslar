@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class RecentViewController: UIViewController {
 
@@ -29,7 +30,8 @@ final class RecentViewController: UIViewController {
         title = "Recent"
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        let nib = UINib(nibName: "RecentTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "cell")
         
         viewModel.fetchPhotos() 
         
@@ -60,9 +62,16 @@ extension RecentViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = viewModel.photoForIndexPath(indexPath)?.ownername
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RecentTableViewCell
+        guard let recent = viewModel.photoForIndexPath(indexPath) else {
+            fatalError("Photo not found")
+        }
+        cell.userName = recent.ownername
+        cell.photoImageView.kf.setImage(with: recent.iconUrl)
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 480
+    }
 }

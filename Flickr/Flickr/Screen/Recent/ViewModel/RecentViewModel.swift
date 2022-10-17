@@ -50,3 +50,19 @@ final class RecentViewModel {
     }
     
 }
+
+/*extension Photo {
+ var iconUrl: URL {
+     guard let icon = url_z,
+           let iconUrl = URL(string: icon) else {
+         guard let icon = url_m,
+               let iconUrl = URL(string: icon) else {
+             let icon = "https://www.computerhope.com/jargon/b/black.jpg",
+             iconUrl = URL(string: icon)
+             return iconUrl!
+         }
+         return iconUrl
+     }
+     return iconUrl
+ }
+}*/

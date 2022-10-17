@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5A275D9428FACEFB00D85C5A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A275D9328FACEFB00D85C5A /* Photo.swift */; };
+		5A38A21528FD5CF400D68A25 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A21428FD5CF400D68A25 /* RecentTableViewCell.swift */; };
+		5A38A21728FD5D5A00D68A25 /* RecentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A38A21628FD5D5A00D68A25 /* RecentTableViewCell.xib */; };
 		5A64EB3D28F6F15900CA2E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A64EB3C28F6F15900CA2E8F /* AppDelegate.swift */; };
 		5A64EB4628F6F15900CA2E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A64EB4528F6F15900CA2E8F /* Assets.xcassets */; };
 		5A64EB4928F6F15900CA2E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A64EB4728F6F15900CA2E8F /* LaunchScreen.storyboard */; };
@@ -25,6 +27,8 @@
 		3D7CBA8E42532434DF311A76 /* Pods-Flickr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flickr.debug.xcconfig"; path = "Target Support Files/Pods-Flickr/Pods-Flickr.debug.xcconfig"; sourceTree = "<group>"; };
 		5720CA0590BE82C010BF02D3 /* Pods_Flickr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flickr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A275D9328FACEFB00D85C5A /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		5A38A21428FD5CF400D68A25 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
+		5A38A21628FD5D5A00D68A25 /* RecentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecentTableViewCell.xib; sourceTree = "<group>"; };
 		5A64EB3928F6F15800CA2E8F /* Flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A64EB3C28F6F15900CA2E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A64EB4528F6F15900CA2E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 				5AFD246528F9760B00A6C6CD /* FlickrAPI.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		5A38A21328FD5CAC00D68A25 /* RecentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				5A38A21428FD5CF400D68A25 /* RecentTableViewCell.swift */,
+				5A38A21628FD5D5A00D68A25 /* RecentTableViewCell.xib */,
+			);
+			path = RecentTableViewCell;
 			sourceTree = "<group>";
 		};
 		5A64EB3028F6F15800CA2E8F = {
@@ -179,6 +192,7 @@
 		5AFD246328F96E6300A6C6CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A38A21328FD5CAC00D68A25 /* RecentTableViewCell */,
 				5AFD245F28F96E5800A6C6CD /* RecentViewController.xib */,
 			);
 			path = View;
@@ -270,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A38A21728FD5D5A00D68A25 /* RecentTableViewCell.xib in Resources */,
 				5A64EB4928F6F15900CA2E8F /* LaunchScreen.storyboard in Resources */,
 				5AFD246128F96E5800A6C6CD /* RecentViewController.xib in Resources */,
 				5A64EB5128F6F25C00CA2E8F /* GoogleService-Info.plist in Resources */,
@@ -326,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A38A21528FD5CF400D68A25 /* RecentTableViewCell.swift in Sources */,
 				5A275D9428FACEFB00D85C5A /* Photo.swift in Sources */,
 				5AFD246628F9760B00A6C6CD /* FlickrAPI.swift in Sources */,
 				5AFD246928F982C300A6C6CD /* RecentViewModel.swift in Sources */,
