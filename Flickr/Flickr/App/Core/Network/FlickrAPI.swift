@@ -35,7 +35,7 @@ extension FlickrAPI: TargetType {
     var task: Moya.Task {
         let parameters: [String : Any] = ["method" : "flickr.photos.getRecent",
                                           "api_key" : "2cc326464820de2df62383eb39da8f19",
-                                          "extras" : "owner_name%2C+url_c",
+                                          "extras" : "owner_name,url_c",
                                           "format" : "json",
                                           "nojsoncallback" : 1]
         return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)

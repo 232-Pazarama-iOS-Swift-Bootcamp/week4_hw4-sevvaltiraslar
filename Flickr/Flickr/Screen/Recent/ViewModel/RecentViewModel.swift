@@ -15,34 +15,18 @@ enum RecentChanges {
 final class RecentViewModel {
     
     private let provider = MoyaProvider<FlickrAPI>()
-    private var photosResponse: PhotosResponse? {
+    var photosResponse: PhotosResponse? {
         didSet {
-            print(photosResponse)
             self.changeHandler?(.didFetchRecent)
         }
     }
     
     var changeHandler: ((RecentChanges) -> Void)?
+
+    /*var numberOfRows: Int {
+        photosResponse?.photos?.photo.
+    }*/
     
-    /*
-    func fetchRecent() {
-        provider.request(.getRecentPhotos) { result in
-            switch result {
-            case .failure(let error):
-                self.changeHandler?(.didErrorOccurred(error))
-            case .success(let response):
-                do {
-                    let photosResponse = try JSONDecoder().decode(PhotosResponse.self, from: response.data)
-                    self.photosResponse = photosResponse
-                } catch {
-                    self.changeHandler?(.didErrorOccurred(error))
-                }
-                
-                self.changeHandler?(.didFetchRecent)
-            }
-        }
-    }
-    */
     func fetchPhotos() {
         provider.request(.getRecentPhotos) { result in
                 switch result {
@@ -50,6 +34,8 @@ final class RecentViewModel {
                     self.changeHandler?(.didErrorOccurred(error))
                 case .success(let response):
                     do {
+                        //let data = String(decoding: response.data, as: UTF8.self)
+                        //print(data)
                         let photosResponse = try JSONDecoder().decode(PhotosResponse.self, from: response.data)
                         self.photosResponse = photosResponse
                     } catch {
@@ -58,5 +44,9 @@ final class RecentViewModel {
                 }
             }
         }
+    
+    /*func photoForIndexPath(_ indexPath: IndexPath) -> Photo? {
+        photosResponse?.photos?.photo?[indexPath.row]
+    }*/
     
 }
