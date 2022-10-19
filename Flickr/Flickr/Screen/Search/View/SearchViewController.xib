@@ -20,8 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="egb-1H-jDB">
-                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="egb-1H-jDB">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZeY-9n-v7P">
                         <size key="itemSize" width="128" height="128"/>
@@ -37,12 +38,6 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="egb-1H-jDB" secondAttribute="trailing" id="0VT-LF-dsM"/>
-                <constraint firstItem="egb-1H-jDB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EQh-f9-NEp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="egb-1H-jDB" secondAttribute="bottom" id="WIS-cx-G8y"/>
-                <constraint firstItem="egb-1H-jDB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xpM-mr-asl"/>
-            </constraints>
             <point key="canvasLocation" x="15" y="-12"/>
         </view>
     </objects>

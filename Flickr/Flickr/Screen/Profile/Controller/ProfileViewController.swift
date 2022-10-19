@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileViewController: UIViewController {
 
@@ -46,6 +47,11 @@ class ProfileViewController: UIViewController {
 
     }
     @IBAction func signOutClicked(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            print("Error")
+        }
     }
     
     @IBAction func likeButtonClicked(_ sender: Any) {
