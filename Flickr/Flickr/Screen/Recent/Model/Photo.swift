@@ -21,7 +21,7 @@ extension Photo {
     var iconUrl: URL {
         guard let icon = url_z,
             let iconUrl = URL(string: icon) else {
-            let icon = "https://www.computerhope.com/jargon/b/black.jpg",
+            let icon = "https://previews.123rf.com/images/kaymosk/kaymosk1804/kaymosk180400006/100130939-error-404-page-not-found-error-with-glitch-effect-on-screen-vector-illustration-for-your-design-.jpg?fj=1",
             iconUrl = URL(string: icon)
             return iconUrl!
         }

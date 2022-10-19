@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentViewController" customModule="Flickr" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="Flickr" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="uNm-vR-h7a" id="gBF-0R-nud"/>
+                <outlet property="collectionView" destination="egb-1H-jDB" id="E0s-vW-zdT"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,24 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uNm-vR-h7a">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="egb-1H-jDB">
                     <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZeY-9n-v7P">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="Stj-Kr-oAv"/>
-                        <outlet property="delegate" destination="-1" id="0tC-UF-yjd"/>
+                        <outlet property="dataSource" destination="-1" id="Lqv-WB-CIo"/>
+                        <outlet property="delegate" destination="-1" id="sOp-69-UeK"/>
                     </connections>
-                </tableView>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="uNm-vR-h7a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fQd-b0-1vg"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uNm-vR-h7a" secondAttribute="bottom" id="jgB-lf-c5f"/>
-                <constraint firstItem="uNm-vR-h7a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jvb-I3-DMO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uNm-vR-h7a" secondAttribute="trailing" id="kF2-Es-ngY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="egb-1H-jDB" secondAttribute="trailing" id="0VT-LF-dsM"/>
+                <constraint firstItem="egb-1H-jDB" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="EQh-f9-NEp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="egb-1H-jDB" secondAttribute="bottom" id="WIS-cx-G8y"/>
+                <constraint firstItem="egb-1H-jDB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xpM-mr-asl"/>
             </constraints>
-            <point key="canvasLocation" x="32" y="-12"/>
+            <point key="canvasLocation" x="15" y="-12"/>
         </view>
     </objects>
     <resources>

@@ -2,7 +2,7 @@
 //  RecentViewController.swift
 //  Flickr
 //
-//  Created by SEVVAL on 14.10.2022.
+//  Created by SEVVAL on 19.10.2022.
 //
 
 import UIKit
@@ -33,7 +33,7 @@ final class RecentViewController: UIViewController {
         let nib = UINib(nibName: "RecentTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "cell")
         
-        viewModel.fetchPhotos() 
+        viewModel.fetchPhotos()
         
         viewModel.changeHandler = { change in
             switch change {
@@ -50,7 +50,10 @@ final class RecentViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension RecentViewController: UITableViewDelegate {
     
-    
+    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = SearchViewController(viewModel: RecentViewModel())
+        navigationController?.pushViewController(viewController, animated: true)
+    }*/
     
 }
 

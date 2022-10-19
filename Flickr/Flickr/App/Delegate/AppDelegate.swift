@@ -15,9 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setupWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
+        //let authViewController = AuthViewController(viewModel: AuthViewModel())
+        //let authNavigationController = UINavigationController(rootViewController: authViewController)
+        //let authViewController = AuthViewController(viewModel: AuthViewModel())
+        //let authNavigationController = UINavigationController(rootViewController: authViewController)
         let viewController = RecentViewController(viewModel: RecentViewModel())
         let navigationController = UINavigationController(rootViewController: viewController)
-        window.rootViewController = navigationController
+        let seacrhViewController = SearchViewController(viewModel: RecentViewModel())
+        let seacrhNavigationController = UINavigationController(rootViewController: seacrhViewController)
+        let profileViewController = ProfileViewController(viewModel: RecentViewModel())
+        let profileNavigationController = UINavigationController(rootViewController: profileViewController)
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [navigationController, seacrhViewController, profileViewController]
+        //window.rootViewController = authViewController
+        window.rootViewController = tabBarController
         window.makeKeyAndVisible()
         self.window = window
     }

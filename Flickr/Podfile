@@ -13,6 +13,7 @@ target 'Flickr' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Firebase/RemoteConfig'
   # Pods for Flickr
 
 end
