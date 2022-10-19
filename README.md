@@ -30,3 +30,12 @@ Kullanıcı profilini düzenleyebilir olmalıdır. Bir profil fotoğrafı ekleye
 - Firebase Cloud Storage: https://firebase.google.com/docs/firestore/quickstart
 - Firebase Remote Config: https://firebase.google.com/docs/remote-config/?authuser=0
 - Örnek Proje:  https://github.com/232-Pazarama-iOS-Swift-Bootcamp/week4_day1_crypto_app
+
+<img width="344" alt="Ekran Resmi 2022-10-19 14 35 16" src="https://user-images.githubusercontent.com/58611650/196680146-f375680c-09f0-4007-a7a7-4781de4b97dd.png">
+
+<img width="369" alt="Ekran Resmi 2022-10-19 14 35 24" src="https://user-images.githubusercontent.com/58611650/196680189-f377a61f-2f0b-4248-93ab-e6071bf3c236.png">
+
+<img width="351" alt="Ekran Resmi 2022-10-19 14 35 34" src="https://user-images.githubusercontent.com/58611650/196680215-8c466a95-ade1-4306-84b4-c90fa9943681.png">
+
+
+
